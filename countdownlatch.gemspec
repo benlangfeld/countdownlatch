@@ -4,14 +4,12 @@ require "countdownlatch/version"
 
 Gem::Specification.new do |s|
   s.name        = "countdownlatch"
-  s.version     = Countdownlatch::VERSION
+  s.version     = CountDownLatch::VERSION
   s.authors     = ["Ben Langfeld"]
   s.email       = ["ben@langfeld.me"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
-
-  s.rubyforge_project = "countdownlatch"
+  s.homepage    = "https://github.com/benlangfeld/countdownlatch"
+  s.summary     = %q{3..2..1..GO!}
+  s.description = %q{A synchronization aid that allows one or more threads to wait until a set of operations being performed in other threads completes}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
