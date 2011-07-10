@@ -20,9 +20,9 @@ end
 latch.wait 10
 ```
 
-## Links:
+## Links
 * [Source](https://github.com/benlangfeld/countdownlatch)
-* [Documentation](http://rdoc.info/github/benlangfeld/countdownlatch/master/frames)
+* [Documentation](http://rdoc.info/github/benlangfeld/countdownlatch/master/CountDownLatch)
 * [Bug Tracker](https://github.com/benlangfeld/countdownlatch/issues)
 
 ## Note on Patches/Pull Requests
