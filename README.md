@@ -1,4 +1,4 @@
-# CountDownLatch
+# CountDownLatch [ ![Build status](http://travis-ci.org/benlangfeld/countdownlatch.png) ](http://travis-ci.org/benlangfeld/countdownlatch)
 A synchronization aid that allows one or more threads to wait until a set of operations being performed in other threads completes
 
 ## Installation
