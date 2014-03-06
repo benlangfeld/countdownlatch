@@ -38,7 +38,13 @@ describe CountDownLatch do
         @latch.wait.must_equal true
       end
 
-      it "returns true if timed out" do
+      it "returns true even if counted down higher than it started" do
+        Thread.new { @latch.countdown! 10 }
+        @latch.wait.must_equal true
+        @latch.count.must_equal -9
+      end
+
+      it "returns false if timed out" do
         @latch.wait(0.01).must_equal false
       end
     end
@@ -92,6 +98,15 @@ describe CountDownLatch do
         end
         @latch.wait
         @latch.count.must_equal 0
+        @name.must_equal :bar
+      end
+
+      it "returns true if counted down by 2" do
+        Thread.new do
+          @name = :bar
+          @latch.countdown! 2
+        end
+        @latch.wait(0.01)
         @name.must_equal :bar
       end
     end
