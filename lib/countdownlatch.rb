@@ -42,10 +42,12 @@ class CountDownLatch
   # * If the current count is greater than zero then it is decremented. If the new count is zero then all waiting threads are re-enabled for thread scheduling purposes.
   # * If the current count equals zero then nothing happens.
   #
-  def countdown!
+  # @param [Integer] Number of times to count it down
+  #
+  def countdown!(n = 1)
     @mutex.synchronize do
-      @count -= 1 if @count > 0
-      @conditional.broadcast if @count == 0
+      @count -= n if @count > 0
+      @conditional.broadcast if @count <= 0
     end
   end
 
